@@ -47,6 +47,10 @@ python -m venv venv
 venv\Scripts\activate.bat
 python -m pip install --upgrade pip setuptools wheel --user
 python -m pip install django django-debug-toolbar django-crispy-forms pillow
+pip install bootstrap4 crispy-bootstrap4 #adicionar "  'bootstrap4', 'crispy_bootstrap4',  " no arquivo settings.py
+python manage.py migrate
+
+
 python manage.py migrate
 ```
 
@@ -57,6 +61,10 @@ cd django-simple-ecommerce
 python3.7 -m venv venv
 . venv/bin/activate
 pip install django django-debug-toolbar django-crispy-forms pillow
+pip install bootstrap4 crispy-bootstrap4 #adicionar "  'bootstrap4', 'crispy_bootstrap4',  " no arquivo settings.py
+python manage.py migrate
+
+
 python manage.py migrate
 ```
 
