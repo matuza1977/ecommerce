@@ -82,3 +82,59 @@ python manage.py migrate
 Pronto!
 
 https://stackoverflow.com/questions/75495403/django-returns-templatedoesnotexist-when-using-crispy-forms?newreg=258f43d5b55649de8301149a64238e01
+<<<<<<< HEAD
+=======
+
+Ou Crie o Script Shell (linux) "ecommerce.sh"
+
+#!/bin/bash
+
+# Abort on errors
+set -e
+
+# Verifica se o Git está instalado e o instala se necessário
+if ! command -v git &> /dev/null; then
+    echo "Git não está instalado. Instalando..."
+    sudo apt update && sudo apt install -y git
+fi
+
+# Clona o repositório do projeto
+echo "Clonando o repositório..."
+git clone https://github.com/luizomf/django-simple-ecommerce.git
+
+# Entra no diretório do projeto
+cd django-simple-ecommerce
+
+# Verifica se Python 3.7 está instalado e o instala se necessário
+if ! python3.7 --version &> /dev/null; then
+    echo "Python 3.7 não está instalado. Instalando..."
+    sudo apt update && sudo apt install -y python3.7 python3.7-venv python3-pip
+fi
+
+# Cria o ambiente virtual
+echo "Criando o ambiente virtual..."
+python3.7 -m venv venv
+
+# Ativa o ambiente virtual
+echo "Ativando o ambiente virtual..."
+source venv/bin/activate
+
+# Instala as dependências do Django e outras bibliotecas
+echo "Instalando dependências..."
+pip install --upgrade pip
+pip install django django-debug-toolbar django-crispy-forms pillow
+
+# Executa as migrações do banco de dados
+echo "Executando as migrações..."
+python manage.py migrate
+
+echo "Configuração concluída! Para iniciar o servidor, use:"
+echo "source venv/bin/activate"
+echo "python manage.py runserver"
+
+Para executar: 
+
+chmod +x ecommerce.sh
+
+./ecommerce.sh
+>>>>>>> 38979c1 (script)
