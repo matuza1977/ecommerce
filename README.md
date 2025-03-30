@@ -82,8 +82,6 @@ python manage.py migrate
 Pronto!
 
 https://stackoverflow.com/questions/75495403/django-returns-templatedoesnotexist-when-using-crispy-forms?newreg=258f43d5b55649de8301149a64238e01
-<<<<<<< HEAD
-=======
 
 Ou Crie o Script Shell (linux) "ecommerce.sh"
 
@@ -137,4 +135,3 @@ Para executar:
 chmod +x ecommerce.sh
 
 ./ecommerce.sh
->>>>>>> 38979c1 (script)
